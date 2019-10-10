@@ -1,5 +1,6 @@
 import re
 import sys
+from os import path
 
 
 date = re.compile(r"\d{1,2}\/\d{1,2}\/\d{2}")
@@ -54,6 +55,7 @@ fp.close()
 ussr = counter(phno, early=True)
 kusers = counter(cont, merge=ussr)
 
+print(dir(path))
 users = kusers
 
 fp = open('users.txt', 'w')
